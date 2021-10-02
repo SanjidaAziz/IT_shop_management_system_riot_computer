@@ -26,7 +26,7 @@ Connection c;
 
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
            c = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=RiotComputer;user=b;password=1234");
-            one.setEnabled(false);
+           one.setEnabled(false);
             two.setEnabled(false);
             position.setEnabled(false);
             sortBy.setEnabled(false);
@@ -35,7 +35,6 @@ Connection c;
            
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(HomeInternal.class.getName()).log(Level.SEVERE, null, ex);
-
         }
         
         

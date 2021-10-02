@@ -236,7 +236,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel5.setText("CPU Builder");
+        jLabel5.setText("Branch");
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/worldwide-location-32.png"))); // NOI18N
 
@@ -261,7 +261,7 @@ public class Home extends javax.swing.JFrame {
         varStaff.setBackground(new java.awt.Color(89, 4, 4));
         varStaff.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         varStaff.setForeground(new java.awt.Color(240, 240, 240));
-        varStaff.setText("Staff");
+        varStaff.setText("Employee");
         varStaff.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(89, 4, 4), 3, true));
         varStaff.setOpaque(false);
         varStaff.addActionListener(new java.awt.event.ActionListener() {
@@ -364,7 +364,7 @@ public class Home extends javax.swing.JFrame {
 
     private void varStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varStaffActionPerformed
         // TODO add your handling code here:
-       mainPanel.removeAll();
+        mainPanel.removeAll();
        StaffInternal si= new StaffInternal();
        mainPanel.add(si).setVisible(true);
     }//GEN-LAST:event_varStaffActionPerformed
