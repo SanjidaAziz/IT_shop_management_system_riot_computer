@@ -36,9 +36,9 @@ public class Login extends javax.swing.JFrame {
         varPassword = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        varLogin = new javax.swing.JLabel();
+        varLoginbtn = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(235, 228, 228));
@@ -108,16 +108,15 @@ public class Login extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/unlock-32.png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 40, 40));
 
-        varLogin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        varLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        varLogin.setText("Login");
-        varLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 2));
-        varLogin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                varLoginMouseClicked(evt);
+        varLoginbtn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        varLoginbtn.setText("Login");
+        varLoginbtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
+        varLoginbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                varLoginbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(varLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(521, 260, 80, 30));
+        jPanel1.add(varLoginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, 90, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,7 +133,7 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void varLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_varLoginMouseClicked
+    private void varLoginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varLoginbtnActionPerformed
         // TODO add your handling code here:
         String usrName = varUserName.getText();
         String pass = varPassword.getText();
@@ -167,9 +166,7 @@ public class Login extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Err Found !!!" + ex);
         }
-
-       
-    }//GEN-LAST:event_varLoginMouseClicked
+    }//GEN-LAST:event_varLoginbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,7 +213,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JLabel varLogin;
+    private javax.swing.JButton varLoginbtn;
     private javax.swing.JPasswordField varPassword;
     private javax.swing.JTextField varUserName;
     // End of variables declaration//GEN-END:variables
