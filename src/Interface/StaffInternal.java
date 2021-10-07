@@ -81,7 +81,7 @@ Connection c;
 
             },
             new String [] {
-                "Employee ID", "Employeet Name", "Gender", "Position", "Age", "Salary", "Branch No"
+                "Employee ID", "Employee Name", "Gender", "Position", "Age", "Salary", "Branch No"
             }
         ) {
             Class[] types = new Class [] {

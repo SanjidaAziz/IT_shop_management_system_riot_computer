@@ -11,6 +11,7 @@ public class Home extends javax.swing.JFrame {
    
     public Home(boolean logedin, String username){
         initComponents();
+        varOwner.setVisible(true);
         varStaff.setVisible(true);
         varBranch.setVisible(true);
         varManage.setVisible(true); 
@@ -26,7 +27,7 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         initComponents();
         varStaff.setVisible(false);  ///later edit false 
-        
+        varOwner.setVisible(false);
         varManage.setVisible(false);
         usernamePanel.setVisible(false);
         mainPanel.removeAll();
@@ -59,6 +60,7 @@ public class Home extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         varStaff = new javax.swing.JButton();
+        varOwner = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
 
@@ -236,7 +238,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel5.setText("Branch");
+        jLabel5.setText("PC Build");
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/worldwide-location-32.png"))); // NOI18N
 
@@ -270,17 +272,31 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        varOwner.setBackground(new java.awt.Color(89, 4, 4));
+        varOwner.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        varOwner.setForeground(new java.awt.Color(240, 240, 240));
+        varOwner.setText("Owner");
+        varOwner.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(89, 4, 4), 3, true));
+        varOwner.setOpaque(false);
+        varOwner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                varOwnerActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(varStaff, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(varHomeInternal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, Short.MAX_VALUE)
                     .addComponent(varManage, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, Short.MAX_VALUE)
                     .addComponent(varBranch, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 3, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(varOwner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(varStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,7 +308,9 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(varManage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(varStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(487, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(varOwner, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(440, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 200, 670));
@@ -386,6 +404,13 @@ public class Home extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_login_logoutActionPerformed
 
+    private void varOwnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_varOwnerActionPerformed
+        // TODO add your handling code here:
+        mainPanel.removeAll();
+       OwnerInternal oi= new OwnerInternal();
+       mainPanel.add(oi).setVisible(true);
+    }//GEN-LAST:event_varOwnerActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -444,6 +469,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel varLogedUsername;
     private javax.swing.JPanel varLogin;
     private javax.swing.JPanel varManage;
+    private javax.swing.JButton varOwner;
     private javax.swing.JButton varStaff;
     // End of variables declaration//GEN-END:variables
 }
